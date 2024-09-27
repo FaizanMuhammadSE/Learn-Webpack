@@ -4,6 +4,7 @@
   "description": "- At start developers create lot of JS files, and then inside html file they have to add scripts in a sequence, to make sure function is available before calling it",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
