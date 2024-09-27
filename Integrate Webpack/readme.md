@@ -1,11 +1,51 @@
-### Conventionally
+# Integrate Webpack
 
-- At start developers create lot of JS files, and then inside html file they have to add scripts in a sequence, to make sure function is available before calling it
+This repository contains a guide and examples for integrating Webpack into your projects.
 
-- If sequence is gonna break, then project won't work
+## Table of Contents
 
-- To overcome this issue there were lot of tools which come in between
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-- Now at lot of evolution, now we have webpack, which bundles our all code into a single javascript bundle, which takes cares of all files dependency
+## Introduction
 
-- You can see in HTML file we added scripts in sequence, to make sure helloWorld function load first before calling it
+Webpack is a powerful module bundler for JavaScript applications. It takes modules with dependencies and generates static assets representing those modules.
+
+## Installation
+
+To install Webpack, you need to have Node.js and npm installed. Run the following command to install Webpack and Webpack CLI:
+
+```bash
+npm install --save-dev webpack webpack-cli
+```
+
+## Configuration
+
+Create a `webpack.config.js` file in the root of your project:
+
+```javascript
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  mode: 'development',
+};
+```
+
+## Usage
+
+To bundle your application, run the following command:
+
+```bash
+npx webpack
+```
+
+This will create a `dist` folder with the bundled `bundle.js` file.
