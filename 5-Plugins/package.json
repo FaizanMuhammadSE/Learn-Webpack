@@ -1,0 +1,21 @@
+{
+  "name": "integrate-webpack",
+  "version": "1.0.0",
+  "description": "- At start developers create lot of JS files, and then inside html file they have to add scripts in a sequence, to make sure function is available before calling it",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^7.1.2",
+    "sass": "^1.79.4",
+    "sass-loader": "^16.0.2",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
