@@ -1,0 +1,18 @@
+.hello-world-button {
+  background-color: #f1356d;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hello-world-button:hover {
+  background-color: #c5295e;
+}
+
+.hello-world-text {
+  font-size: 20px;
+  color: #333;
+}
