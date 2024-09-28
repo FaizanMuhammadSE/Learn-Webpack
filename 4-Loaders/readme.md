@@ -15,3 +15,35 @@
 - Now this can't be achieved through Webpack assets, we need loaders (npm pkgs/libraries) which will read css files, and will include style tags in our HTML file
   1. css-loader
   2. style-loader
+- Order of loaders matters a lot, because webpack processes loaders from right to left, and we can use multiple loaders in single rule
+
+```
+    rules: [
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: 'asset/resource', // It will create Separete file for these assets, and will be served over network
+      },
+      {
+        test: /\.(css)$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+```
+
+- For assets we use `type` and for loaders we use `use`
+- Instead of plain CSS, we can also leverage CSS preprocessors as well like SASS, but for them we need loaders as well, e.g for SASS we will use `sass-loader` loader
+
+```
+    rules: [
+      {
+        test: /\.(scss)$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
+```
+
+- Webpack will apply this rule in a sequence from right to left
+
+1. First `sass-loader` will be used for preprocessing .scss files into css files
+2. Then `css-loader` will be used on converted files to convert them in javascript representation
+3. At last `style-loader` will be used to add styles into HTML

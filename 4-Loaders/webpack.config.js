@@ -17,8 +17,9 @@ module.exports = {
         type: 'asset/source', // It will embed the asset in the bundle itself
       },
       {
-        test: /\.(css)$/i,
-        use: ['style-loader', 'css-loader'], // It will load the css file and inject it into the DOM
+        test: /\.(scss)$/i,
+        use: ['style-loader', 'css-loader', 'sass-loader'], // It will load the css file and inject it into the DOM
+        // Order of loaders matters a lot, Webpack will apply them from right to left, so css-loader will be applied first and then style-loader
       },
     ],
   },

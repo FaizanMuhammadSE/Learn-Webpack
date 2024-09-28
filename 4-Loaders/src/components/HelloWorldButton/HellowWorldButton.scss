@@ -1,0 +1,23 @@
+$BUTTON-BKG-COLOR: #f1356d;
+$BUTTON-TEXT-COLOR: white;
+$BUTTON-HOVER-COLOR: #c5295e;
+$TEXT-COLOR: gray;
+
+.hello-world-button {
+  background-color: $BUTTON-BKG-COLOR;
+  color: $BUTTON-TEXT-COLOR;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hello-world-button:hover {
+  background-color: $BUTTON-HOVER-COLOR;
+}
+
+.hello-world-text {
+  font-size: 20px;
+  color: $TEXT-COLOR;
+}
